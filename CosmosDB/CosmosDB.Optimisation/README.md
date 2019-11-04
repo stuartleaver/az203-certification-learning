@@ -1,4 +1,4 @@
-# Azure Cosmon DB Optimisation
+# Azure Cosmos DB Optimisation
 
 An example of how increasing and decreasing the RU's of a container can affect the speed at which your application can create documents.
 
