@@ -48,6 +48,6 @@ URL: - https://<url>/api/Phonebook/
 ## Issues
 1. It doesn't seem that webapi is a supported project as an error was given saying the csproj file type was not supported. I had more (if you can call it that) luck using mvc in step 6 in the setup.
 
-2. It doesn't seem that Web Apps in Azure support 3.0 yet - https://stackoverflow.com/questions/58203359/azure-web-app-with-net-core-3-0-fails-cant-find-microsoft-aspnetcore-app
+2. It doesn't seem that Web Apps in Azure support 3.0 yet - https://stackoverflow.com/questions/58203359/azure-web-app-with-net-core-3-0-fails-cant-find-microsoft-aspnetcore-app Trying the Extension didn't work either. Maybe it was something I was doing wrong.
 
 If anyone wants to help fix the above issues, please feel free.
