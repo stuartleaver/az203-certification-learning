@@ -7,15 +7,15 @@ Instructions are on the link but, to create the resources in Azure using the CLI
 
 1. ```az webapp deployment user set --user-name <username> --password <password>```
 
-2. ```az group create --name myResourceGroup --location "West Europe"```
+2. ```az group create --name <resource-group-name> --location "West Europe"```
 
-3. ```az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku FREE```
+3. ```az appservice plan create --name <app-service-plan-name> --resource-group <resource-group-name> --sku FREE --is-linux```
 
-4. ```az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app-name> --deployment-local-git```
+4. ```az webapp create --resource-group <resource-group-name> --plan <app-service-plan-name> --name <app-name> --runtime "ddotnetcore|3.0" --deployment-local-git```
 
 5. On your local machine in a command window, navigate to a working directory.
 
-6. Run ```dotnet new webapi -n <name of app>``` This is where it fell apart a bit.
+6. Run ```dotnet new webapi -n <name of app>```
 
 7. Write some code
 
@@ -44,10 +44,9 @@ URL: - https://<url>/api/Phonebook/
 }
 ```
 
+## Useful stuff
+Thanks to the following links:
+[Create an Azure App Service plan](https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-dotnetcore#create-an-azure-app-service-plan)
 
-## Issues
-1. It doesn't seem that webapi is a supported project as an error was given saying the csproj file type was not supported. I had more (if you can call it that) luck using mvc in step 6 in the setup.
-
-2. It doesn't seem that Web Apps in Azure support 3.0 yet - https://stackoverflow.com/questions/58203359/azure-web-app-with-net-core-3-0-fails-cant-find-microsoft-aspnetcore-app Trying the Extension didn't work either. Maybe it was something I was doing wrong.
-
-If anyone wants to help fix the above issues, please feel free.
+Thanks to the following CLI command pointing me to Linux
+```az webapp list-runtimes --linux | grep DOTNETCORE```
