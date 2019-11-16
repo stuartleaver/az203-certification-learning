@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "<storage-account-connection-string>",
+    "EmailSender": "<sender-email-address>",
+    "SendGridApiKey": "<send-grid-api-key>",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  }
+}
